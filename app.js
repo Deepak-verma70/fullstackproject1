@@ -68,7 +68,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-app.listen(8080,()=>{
+app.listen(3000,()=>{
     console.log("server start");
 });
 app.engine("ejs",ejsMate);
@@ -96,11 +96,6 @@ app.use((req,res,next)=>{
 
 app.use("/listings",listings);
 app.use("/",userRouter);
-
-
-app.get("/",(req,res)=>{
-    res.render("listings/index.ejs");
-})
 
 
 
